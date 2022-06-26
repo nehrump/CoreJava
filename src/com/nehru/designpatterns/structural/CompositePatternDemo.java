@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-interface Account {
-
-    int showBalance();
-}
-
 /**
  * Composite Pattern allows the Leaf and composite to be treated same
  */
@@ -31,6 +26,12 @@ public class CompositePatternDemo {
 
     }
 }
+
+interface Account {
+
+    int showBalance();
+}
+
 
 class CurrentAccount implements Account {
 

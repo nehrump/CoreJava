@@ -1,10 +1,8 @@
 package com.nehru.designpatterns.behavioral;
 
-interface Button {
-
-  void pressButton();
-}
-
+/**
+ * The type Command pattern decouple objects that produce the commands from their consumers
+ */
 public class CommandPatternDemo {
 
 
@@ -23,6 +21,12 @@ public class CommandPatternDemo {
 
 
 }
+
+interface Button {
+
+  void pressButton();
+}
+
 
 class RemoteUser {
 

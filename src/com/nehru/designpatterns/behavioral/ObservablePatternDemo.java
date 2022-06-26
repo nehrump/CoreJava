@@ -5,26 +5,10 @@ import java.util.List;
 
 
 /**
- * The interface Observer.
- */
-interface Observer {
-
-    /**
-     * Update.
-     */
-    void update();
-}
-
-/**
- * The type Observable pattern demo.
+ * The type Observable pattern - notifies all subscribers when the observable object is changing
  */
 public class ObservablePatternDemo {
 
-    /**
-     * Main.
-     *
-     * @param args the args
-     */
     public static void main(String[] args) {
         NotificationHandler notificationHandler = new NotificationHandler();
 
@@ -44,9 +28,12 @@ public class ObservablePatternDemo {
     }
 }
 
-/**
- * The type User.
- */
+interface Observer {
+
+    void update();
+}
+
+
 class User implements Observer {
 
     @Override
@@ -55,9 +42,6 @@ class User implements Observer {
     }
 }
 
-/**
- * The type Seller.
- */
 class Seller implements Observer {
 
     @Override
@@ -66,9 +50,6 @@ class Seller implements Observer {
     }
 }
 
-/**
- * The type Warehouse.
- */
 class Warehouse implements Observer {
 
     @Override
@@ -77,44 +58,22 @@ class Warehouse implements Observer {
     }
 }
 
-/**
- * The type Notification handler which responsible for managing the subscriptions
- */
 class NotificationHandler {
 
-    /**
-     * The Observers.
-     */
     List<Observer> observers;
 
-    /**
-     * Instantiates a new Notification handler.
-     */
     NotificationHandler() {
         observers = new ArrayList<>();
     }
 
-    /**
-     * Register observer.
-     *
-     * @param observer the observer
-     */
     void registerObserver(Observer observer) {
         observers.add(observer);
     }
 
-    /**
-     * De register observer.
-     *
-     * @param observer the observer
-     */
     void deRegisterObserver(Observer observer) {
         observers.remove(observer);
     }
 
-    /**
-     * Notify observers.
-     */
     void notifyObservers() {
         for (Observer observer : observers) {
             observer.update();

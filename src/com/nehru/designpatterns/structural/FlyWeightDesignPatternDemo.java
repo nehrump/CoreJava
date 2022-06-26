@@ -3,13 +3,10 @@ package com.nehru.designpatterns.structural;
 import java.util.HashMap;
 import java.util.Map;
 
-interface Employee {
-
-  void performTask();
-
-  void fillTimesheet();
-}
-
+/**
+ * The type Fly weight design pattern - says reuse already existing similar kind of objects by
+ * storing them and create new object when no matching object is found
+ */
 public class FlyWeightDesignPatternDemo {
 
   public static void main(String[] args) {
@@ -21,6 +18,14 @@ public class FlyWeightDesignPatternDemo {
   }
 
 }
+
+interface Employee {
+
+  void performTask();
+
+  void fillTimesheet();
+}
+
 
 class EmployeeFactory {
 

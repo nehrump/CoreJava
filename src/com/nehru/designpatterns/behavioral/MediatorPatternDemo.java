@@ -1,7 +1,7 @@
 package com.nehru.designpatterns.behavioral;
 
 /**
- * The type Mediator pattern -defines an object that encapsulates how a set of objects interact
+ * The type Mediator pattern - defines an object that encapsulates how a set of objects interact
  */
 public class MediatorPatternDemo {
 

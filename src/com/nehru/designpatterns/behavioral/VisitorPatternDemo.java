@@ -1,11 +1,5 @@
 package com.nehru.designpatterns.behavioral;
 
-interface Management {
-
-  void accept(Visitor v);
-}
-
-
 /**
  * The type Visitor pattern - defines a new operation without introducing the modifications to an
  * existing object structure.
@@ -23,6 +17,12 @@ public class VisitorPatternDemo {
 
   }
 }
+
+interface Management {
+
+  void accept(Visitor v);
+}
+
 
 class Visitor {
 

@@ -1,12 +1,9 @@
 package com.nehru.designpatterns.structural;
 
-interface Mobile {
-
-  void displayPrice();
-
-  void displayModel();
-}
-
+/**
+ * The type Facade design pattern - provides simplified interface to a set of complicated
+ * interfaces
+ */
 public class FacadeDesignPattern {
 
   public static void main(String[] args) {
@@ -15,6 +12,14 @@ public class FacadeDesignPattern {
   }
 
 }
+
+interface Mobile {
+
+  void displayPrice();
+
+  void displayModel();
+}
+
 
 class Iphone implements Mobile {
 

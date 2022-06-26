@@ -1,10 +1,5 @@
 package com.nehru.designpatterns.behavioral;
 
-interface Strategy {
-
-  void sort();
-}
-
 public class StrategyPatternDemo {
 
   public static void main(String[] args) {
@@ -16,6 +11,12 @@ public class StrategyPatternDemo {
   }
 
 }
+
+interface Strategy {
+
+  void sort();
+}
+
 
 class EmployeeCollection {
 

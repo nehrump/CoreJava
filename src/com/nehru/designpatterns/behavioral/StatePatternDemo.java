@@ -1,10 +1,5 @@
 package com.nehru.designpatterns.behavioral;
 
-interface Status {
-
-  void validateAccess(Employee employee);
-}
-
 /**
  * The type State pattern allow the object for changing its behavior(based on current state) without
  * changing its class
@@ -20,6 +15,12 @@ public class StatePatternDemo {
     inactiveEmployee.checkAccess();
   }
 }
+
+interface Status {
+
+  void validateAccess(Employee employee);
+}
+
 
 class Employee {
 

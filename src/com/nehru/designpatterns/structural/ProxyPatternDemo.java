@@ -2,31 +2,12 @@ package com.nehru.designpatterns.structural;
 
 
 /**
- * The interface Database executor.
- */
-interface DatabaseExecutor {
-
-  /**
-   * Execute.
-   *
-   * @param query the query
-   * @param role  the role
-   */
-  void execute(String query, String role);
-}
-
-/**
  * The type Proxy pattern demo. Real service and proxy service is implemented by same interface and
  * proxy is being called and allows call to real service only if the condition meets
  */
 public class ProxyPatternDemo {
 
 
-  /**
-   * Main.
-   *
-   * @param args the args
-   */
   public static void main(String[] args) {
     DatabaseExecutor databaseExecutor = new OracleDatabaseExecutorProxy();
 
@@ -39,9 +20,12 @@ public class ProxyPatternDemo {
 
 }
 
-/**
- * The type Oracle database executor.
- */
+interface DatabaseExecutor {
+
+  void execute(String query, String role);
+}
+
+
 class OracleDatabaseExecutor implements DatabaseExecutor {
 
   @Override
@@ -51,14 +35,8 @@ class OracleDatabaseExecutor implements DatabaseExecutor {
 
 }
 
-/**
- * The type Oracle database executor proxy.
- */
 class OracleDatabaseExecutorProxy implements DatabaseExecutor {
 
-  /**
-   * The Oracle database executor.
-   */
   OracleDatabaseExecutor oracleDatabaseExecutor;
 
   @Override
