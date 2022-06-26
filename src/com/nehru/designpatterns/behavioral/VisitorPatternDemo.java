@@ -5,6 +5,11 @@ interface Management {
   void accept(Visitor v);
 }
 
+
+/**
+ * The type Visitor pattern - defines a new operation without introducing the modifications to an
+ * existing object structure.
+ */
 public class VisitorPatternDemo {
 
   public static void main(String[] args) {
