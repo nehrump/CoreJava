@@ -46,7 +46,7 @@ class CircularLinkedList {
     if (head == null) {
       head = temp; //
       tail = temp;
-      tail.next = temp;
+      tail.next = null;
       size++;
     } else {
 
