@@ -13,6 +13,7 @@ public class SinglyLinkedListDemo {
     singlyLL.add(5);
 
     singlyLL.delete(8);
+    singlyLL.delete(1);
 
     singlyLL.display();
   }
@@ -54,6 +55,13 @@ class SinglyLL {
     Node previous = null;
     Node current = head;
 
+    // In case value is found at first it will not have previous value
+    if (head.value == value) {
+      head = head.next;
+      return;
+    }
+
+    //
     while (current != null && current.value != value) {
       previous = current;
       current = current.next;
