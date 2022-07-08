@@ -2,8 +2,10 @@ package com.example.demo.problems;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -13,21 +15,43 @@ import lombok.Data;
 public class Java8Problems {
 
   public static void main(String[] args) {
+    List<Employee> list = new ArrayList<>();
+    Employee e1 = new Employee(23, "e1", "d1");
+    Employee e2 = new Employee(32, "e4", "d1");
+    Employee e3 = new Employee(33, "e5", "d2");
+    Employee e4 = new Employee(34, "e2", "d2");
+    Employee e5 = new Employee(27, "e3", "d3");
+    Employee e6 = new Employee(23, "e6", "d3");
 
-    displayMaxSalaryByDept();
+    list.add(e1);
+    list.add(e2);
+    list.add(e3);
+    list.add(e4);
+    list.add(e5);
+    list.add(e6);
+
+    displayMaxSalaryByDept(list);
+
+    Map<String, Employee> map;
+
+    map = list.stream().collect(Collectors.toMap(Employee::getName, Function.identity()));
+
+    sortMapByAge(map);
 
   }
 
+  static void sortMapByAge(Map<String, Employee> employeeMap) {
 
-  static void displayMaxSalaryByDept() {
-    List<Employee> list = new ArrayList<>();
-    list.add(new Employee(23, "e1", "d1"));
-    list.add(new Employee(32, "e4", "d1"));
-    list.add(new Employee(33, "e5", "d2"));
-    list.add(new Employee(34, "e2", "d2"));
+    Map<String, Employee> map = employeeMap.entrySet().stream()
+        .sorted(Comparator.comparing(em -> em.getValue().getAge()))
+        .collect(
+            Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
-    list.add(new Employee(27, "e3", "d3"));
-    list.add(new Employee(23, "e6", "d3"));
+    System.out.println(map.toString());
+  }
+
+
+  static void displayMaxSalaryByDept(List<Employee> list) {
 
     Map<String, Employee> employeeMap = list.stream()
         .collect(Collectors.toMap(Employee::getDept, Function.identity(),
@@ -36,6 +60,7 @@ public class Java8Problems {
     System.out.println(employeeMap.toString());
 
   }
+
 
   @Data
   @AllArgsConstructor
