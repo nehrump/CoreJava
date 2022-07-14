@@ -1,6 +1,7 @@
 package com.example.demo.problems;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Map.Entry;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -48,6 +50,30 @@ public class Java8Problems {
             Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
     System.out.println(map.toString());
+  }
+
+  public static void main2(String[] args) {
+    Integer[] arr = new Integer[]{1, 2, 3, 2, 4, 1, 1, 5, 5, 5, 5};
+    List<Integer> list = Stream.of(arr).collect(Collectors.toList());
+
+    int x = 10;
+
+    Map<Integer, Integer> map = Stream.of(arr)
+        .distinct()
+        .collect(
+            Collectors.toMap(
+                Function.identity(),
+                i -> Collections.frequency(list, i),
+                (a, b) -> a,
+                LinkedHashMap::new)
+        );
+
+    map.entrySet()
+        .stream()
+        .sorted(Map.Entry.comparingByValue())
+        .collect(Collectors.toMap(entry -> entry.getKey(), entry -> entry.getValue()));
+
+
   }
 
 
