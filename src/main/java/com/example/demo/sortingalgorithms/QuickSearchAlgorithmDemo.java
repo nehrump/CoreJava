@@ -16,7 +16,7 @@ public class QuickSearchAlgorithmDemo {
 
   public static void main(String[] args) {
 
-    int[] input = new int[]{5, 8, 24, 7, 24, 4, 12, 6, 9, 1};
+    int[] input = new int[]{5, 7, 4, 6, 8};
 
     quickSort(input, 0, input.length - 1);
 
@@ -27,36 +27,29 @@ public class QuickSearchAlgorithmDemo {
   private static void quickSort(int[] input, int startIndex, int endIndex) {
 
     if (startIndex < endIndex) {
-      int pivotIndex = (startIndex + endIndex) / 2;
-      int pivot = input[pivotIndex];
-      swap(input, pivotIndex, endIndex);
+      int pi = partition(input, startIndex, endIndex);
 
-      int leftPointer = partition(input, startIndex, endIndex, pivot);
-
-      quickSort(input, startIndex, leftPointer - 1);
-      quickSort(input, leftPointer + 1, endIndex);
-
+      quickSort(input, startIndex, pi - 1);
+      quickSort(input, pi + 1, endIndex);
     }
+
 
   }
 
-  private static int partition(int[] input, int startIndex, int endIndex, int pivot) {
-    int leftPointer = startIndex;
-    int rightPointer = endIndex;
-    while (leftPointer < rightPointer) {
-      while (input[leftPointer] <= pivot && leftPointer < rightPointer) {
-        leftPointer++;
+  private static int partition(int[] input, int startIndex, int endIndex) {
+    int i = startIndex - 1;
+    int pivot = input[endIndex];
+    for (int j = startIndex; j < endIndex; j++) {
+      if (input[j] < pivot) {
+        i++;
+        if (i != j) {
+          swap(input, i, j);
+        }
       }
+    }
+    swap(input, i + 1, endIndex);
 
-      while (input[rightPointer] >= pivot && leftPointer < rightPointer) {
-        rightPointer--;
-      }
-      swap(input, leftPointer, rightPointer);
-    }
-    if (input[leftPointer] > input[endIndex]) {
-      swap(input, leftPointer, endIndex);
-    }
-    return leftPointer;
+    return i + 1;
   }
 
   private static void swap(int[] input, int i, int j) {
