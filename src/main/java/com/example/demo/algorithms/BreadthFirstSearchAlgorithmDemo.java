@@ -1,4 +1,4 @@
-package com.example.demo.alogorithms;
+package com.example.demo.algorithms;
 
 public class BreadthFirstSearchAlgorithmDemo {
 
