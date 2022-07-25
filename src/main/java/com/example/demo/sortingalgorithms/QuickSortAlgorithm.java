@@ -12,7 +12,7 @@ import java.util.Arrays;
  * 6.when i value greater than pivot, swap i and pivot
  * */
 
-public class QuickSearchAlgorithmDemo {
+public class QuickSortAlgorithm {
 
   public static void main(String[] args) {
 
