@@ -1,19 +1,8 @@
-package com.example.demo.datastructures.linear;
+package com.example.demo.datastructures.nonlinear;
 
 // Java program for different tree traversals
 
-/* Class containing left and right child of current
-node and key value*/
-class Node {
 
-  int key;
-  Node left, right;
-
-  public Node(int item) {
-    key = item;
-    left = right = null;
-  }
-}
 
 public class BinaryTreeTraversalDemo {
 
@@ -107,6 +96,19 @@ public class BinaryTreeTraversalDemo {
 
   void printPreorder() {
     printPreorder(root);
+  }
+
+  /* Class containing left and right child of current
+node and key value*/
+  private static class Node {
+
+    int key;
+    Node left, right;
+
+    public Node(int item) {
+      key = item;
+      left = right = null;
+    }
   }
 
 

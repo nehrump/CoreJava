@@ -1,9 +1,11 @@
 package com.example.demo.datastructures.linear;
 
+import java.util.function.Consumer;
+
 public class SinglyLinkedListDemo {
 
   public static void main(String[] args) {
-    SinglyLL singlyLL = new SinglyLL();
+    LinkList<Integer> singlyLL = new LinkList<>();
 
     singlyLL.delete(5);
     singlyLL.add(1);
@@ -21,71 +23,94 @@ public class SinglyLinkedListDemo {
 }
 
 
-class SinglyLL {
+class LinkList<T> {
 
-  Node head;
+  Node<T> head;
 
-  class Node {
+  private static class Node<T> {
 
-    Node next;
-    int value;
+    T data;
+    Node<T> next;
 
-    Node(int value) {
-      this.value = value;
+    Node(T data) {
+      this.data = data;
     }
+
   }
 
-  void add(int value) {
+  void add(T t) {
     if (head == null) {
-      head = new Node(value);
+      head = new Node<>(t);
+
     } else {
-      Node last = head;
-      while (last.next != null) {
-        last = last.next;
+      Node<T> current = new Node<>(t);
+      Node<T> temp = head;
+      while (temp.next != null) {
+        temp = temp.next;
       }
-      last.next = new Node(value);
+      temp.next = current;
+
     }
   }
 
-  void delete(int value) {
+
+  void delete(T t) {
     if (head == null) {
-      System.out.println("List is empty");
-      return;
+      sout.accept("List is empty");
+    } else {
+      if (head.data == t) {
+        head = head.next;
+      } else {
+        Node<T> current = head;
+        Node<T> previous = null;
+        while (current.data != t) {
+          previous = current;
+          current = current.next;
+        }
+        sout.accept(current.data + " is removed");
+        previous.next = current.next;
+
+      }
     }
-    Node previous = null;
-    Node current = head;
-
-    // In case value is found at first it will not have previous value
-    if (head.value == value) {
-      head = head.next;
-      return;
-    }
-
-    //
-    while (current != null && current.value != value) {
-      previous = current;
-      current = current.next;
-
-    }
-
-    if (current == null) {
-      System.out.println("Not found");
-      return;
-    }
-
-    previous.next = current.next;
 
   }
+
+
+  void reverse() {
+
+    if (head == null) {
+      sout.accept("List is empty");
+    } else {
+      Node<T> current = head;
+      Node<T> previous = null;
+      Node<T> next = null;
+
+      while (current != null) { //1-2-3-null  //2-3-null //3-null
+        next = current.next; //2-3-null //3-null //null
+        current.next = previous; //null //1-null //2-1-null
+        previous = current; //1-null  //2-1-null //3-2-1-null
+        current = next; //2-3-null //3-null //null
+
+      }
+      head = previous;
+    }
+
+
+  }
+
+
+  Consumer<String> sout = System.out::println;
 
   void display() {
-    Node node = head;
-    if (node == null) {
-      System.out.println("List is empty");
-    }
+    if (head == null) {
+      sout.accept("List is empty");
+    } else {
+      Node<T> current = head;
+      while (current != null) {
+        sout.accept(current.data + " ");
+        current = current.next;
 
-    while (node != null) {
-      System.out.print(node.value + " ");
-      node = node.next;
+      }
     }
 
   }

@@ -1,4 +1,4 @@
-package com.example.demo.problems;
+package com.example.demo.datastructures.linear;
 
 public class LLDemo {
 

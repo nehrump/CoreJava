@@ -1,27 +1,84 @@
 package com.example.demo.datastructures.linear;
 
-import java.util.Comparator;
-import java.util.Stack;
 
 public class StackDemo {
 
-  public static void main(String[] args) {
-    Stack<Integer> stack = new Stack<>();
 
+  public static void main(String[] args) {
+    CustomStack<Integer> stack = new CustomStack<>();
     stack.push(1);
-    stack.push(2); //insert data to stack
+    stack.push(2);
     stack.push(3);
 
-    System.out.println(stack.peek()); //gets top element
-    System.out.println(stack.pop()); //removes top element
-    System.out.println(stack);
-    stack.push(10);
-    stack.push(5);
-    stack.sort(Comparator.naturalOrder());
+    stack.display();
 
-    System.out.println(stack);
+    stack.pop();
+    stack.display();
+  }
 
+
+}
+
+class CustomStack<T> {
+
+  private Node<T> node;
+
+  void push(T t) {
+    if (node == null) {
+      node = new Node<>(t);
+    } else {
+      Node<T> newNode = new Node<>(t);
+      newNode.next = node;
+      node = newNode;
+    }
+  }
+
+  void pop() {
+    if (node == null) {
+      System.out.println("Stack is empty");
+    } else {
+      System.out.println(node.data + " is removed");
+      node = node.next;
+
+    }
 
   }
 
+  void display() {
+    if (node == null) {
+      System.out.println("Stack is empty");
+    } else {
+      Node<T> currentNode = node;
+      while (currentNode != null) {
+        System.out.println(currentNode.data + " ");
+        currentNode = currentNode.next;
+      }
+
+    }
+
+  }
+
+  private static class Node<T> {
+
+    T data;
+    Node<T> next;
+
+    Node(T data) {
+      this.data = data;
+    }
+
+
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
