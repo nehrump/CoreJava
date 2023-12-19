@@ -1,9 +1,12 @@
 package com.example.demo.designpatterns.behavioral;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * The type State pattern allow the object for changing its behavior(based on current state) without
  * changing its class
  */
+@Slf4j
 public class StatePatternDemo {
 
 

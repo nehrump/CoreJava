@@ -1,5 +1,7 @@
 package com.example.demo.designpatterns.behavioral;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +9,8 @@ import java.util.List;
 /**
  * The type Observable pattern - notifies all subscribers when the observable object is changing
  */
+
+@Slf4j
 public class ObservablePatternDemo {
 
     public static void main(String[] args) {
@@ -21,7 +25,7 @@ public class ObservablePatternDemo {
         notificationHandler.registerObserver(warehouse);
 
         notificationHandler.notifyObservers();
-
+        log.info("Dergistering Warehouse");
         notificationHandler.deRegisterObserver(warehouse);
         notificationHandler.notifyObservers();
 
@@ -69,7 +73,6 @@ class NotificationHandler {
     void registerObserver(Observer observer) {
         observers.add(observer);
     }
-
     void deRegisterObserver(Observer observer) {
         observers.remove(observer);
     }
