@@ -1,0 +1,353 @@
+{
+  "personalInfo": {
+    "fatherName": "MARIAPPAN ARJUNAN",
+    "orgFirmInfo": {
+      "AssesseeName": {
+        "SurNameOrOrgName": "MARIAPPAN"
+      },
+      "DateOFFormOrIncorp": "1992-01-06",
+      "StatusOrCompanyType": "IND"
+    },
+    "address": {
+      "zipCode": "",
+      "localityOrArea": "Surappalli",
+      "residenceNo": "3/435,Sorayanvalavu",
+      "cityOrTownOrDistrict": "SALEM",
+      "mobileNo": 8778763624,
+      "emailAddressSecondary": "",
+      "emailAddress": "nehru.mp@gmail.com",
+      "countryCodeMobile": 91,
+      "phone": {
+        "stDcode": 91,
+        "phoneNo": 8778763624
+      },
+      "countryCode": "91",
+      "roadOrStreet": "Jalakantapuram S.O",
+      "pinCode": 636501,
+      "stateCode": "29",
+      "residenceName": "Soorappalli Village,Jalakandapuram post"
+    },
+    "assesseeName": {
+      "firstName": "NEHRU",
+      "surNameOrOrgName": "MARIAPPAN"
+    },
+    "portugeseCC5A": "",
+    "assesseeVerName": "NEHRU MARIAPPAN",
+    "capacity": "S",
+    "filingStatus": {
+      "residentialStatus": "RES"
+    },
+    "assesseVerPan": "AQNPN6346B",
+    "dob": "1992-01-06",
+    "aadhaarCardNo": "ODM5MzA3MTU5ODE3",
+    "pan": "AQNPN6346B",
+    "status": "I"
+  },
+  "orgFirmInfo": null,
+  "form10DA": null,
+  "form3CD": {
+    "PartAOI": {
+      "ScheduleTPSAFlg": "N",
+      "Amount": 0
+    }
+  },
+  "scheduleAL": null,
+  "form3CE": null,
+  "form26as": {
+    "tdsOnSalaries": {
+      "tdsOnSalary": [
+        {
+          "totalTDSSal": 127237,
+          "incChrgSal": 1150773,
+          "employerOrDeductorOrCollectDetl": {
+            "tan": "DELH01586E",
+            "employerOrDeductorOrCollecterName": "HCL TECHNOLOGIES LTD."
+          }
+        },
+        {
+          "totalTDSSal": 49554,
+          "incChrgSal": 775208,
+          "employerOrDeductorOrCollectDetl": {
+            "tan": "BLRL08038C",
+            "employerOrDeductorOrCollecterName": "LULULEMON INDIA (SERVICES) PRIVATE LIMITED"
+          }
+        },
+        {
+          "totalTDSSal": 25130,
+          "incChrgSal": 812542,
+          "employerOrDeductorOrCollectDetl": {
+            "tan": "MUMJ05980C",
+            "employerOrDeductorOrCollecterName": "J P MORGAN SERVICES INDIA PRIVATE LIMITED"
+          }
+        }
+      ]
+    },
+    "incomeDeductionsOthersInc": [
+      {
+        "othSrcOthAmount": 1951,
+        "othSrcNatureDesc": "SAV"
+      }
+    ]
+  },
+  "form10IBICID": null,
+  "otherSourceIncome": null,
+  "form10IE": null,
+  "form10CCE": null,
+  "form10CCF": null,
+  "form10CCD": null,
+  "itba": null,
+  "form64D": null,
+  "verification": {
+    "declaration": {
+      "fatherName": "MARIAPPAN ARJUNAN",
+      "assesseeVerPAN": "AQNPN6346B",
+      "assesseeVerName": "NEHRU MARIAPPAN"
+    },
+    "capacity": "S"
+  },
+  "bankAccountDtls": [
+    {
+      "addtnlBankDetails": [
+        {
+          "useForRefund": "true",
+          "bankAccountNo": "218101514620",
+          "bankName": "ICICI BANK LIMITED",
+          "ifsccode": "ICIC0002181"
+        }
+      ]
+    }
+  ],
+  "form56F": null,
+  "insights": {
+    "cumulativeSalary": {
+      "perquisitesValue": 14318,
+      "profitsInSalary": 0,
+      "salary": 2724205,
+      "salaryUpdateTimestamp": "2023-08-29 13:39:02.0"
+    },
+    "salaries": {
+      "salary": [
+        {
+          "nameOfEmployer": "HCL TECHNOLOGIES LTD.",
+          "salarys": {
+            "valueOfPerquisites": 0,
+            "profitsinLieuOfSalary": 0,
+            "salary": 1150773
+          },
+          "tanOfEmployer": "DELH01586E"
+        },
+        {
+          "nameOfEmployer": "J P MORGAN SERVICES INDIA PRIVATE LIMITED",
+          "salarys": {
+            "valueOfPerquisites": 14318,
+            "profitsinLieuOfSalary": 0,
+            "salary": 798224
+          },
+          "tanOfEmployer": "MUMJ05980C"
+        },
+        {
+          "nameOfEmployer": "LULULEMON INDIA (SERVICES) PRIVATE LIMITED",
+          "salarys": {
+            "valueOfPerquisites": 0,
+            "profitsinLieuOfSalary": 0,
+            "salary": 775208
+          },
+          "tanOfEmployer": "BLRL08038C"
+        }
+      ]
+    },
+    "intrstFrmSavingBank": 1951,
+    "incomeDeductionsOthersInc": [
+      {
+        "othSrcOthAmount": 1951,
+        "othSrcNatureDesc": "SAV"
+      }
+    ]
+  },
+  "form10CCB": null,
+  "form29b": null,
+  "scheduleCFL": null,
+  "filingStatus": {
+    "clauseiv7provisio139iDtls": [
+      {
+        "clauseiv7provisio139iAmount": 201921,
+        "clauseiv7provisio139iNature": "YES"
+      }
+    ],
+    "SeventhProvisio139": "Y",
+    "NewTaxRegime": "N",
+    "OptingNewTaxRegimeForm10IF": 2,
+    "receiptNo": "380049900070723",
+    "returnFileSec": 17,
+    "OptingNewTaxRegime": 2,
+    "clauseiv7provisio139i": "Y",
+    "origRetFiledDate": "2023-07-07"
+  },
+  "form24q": {
+    "form24qTimestamp": "2023-06-02 01:37:20.56",
+    "usrDeductUndChapVIAType": {
+      "section80CCD1B": 0,
+      "section80CCDEmployeeOrSE": 0,
+      "section80TTA": 0,
+      "section80C": 186357,
+      "section80CCC": 0,
+      "section80E": 0,
+      "section80CCDEmployer": 0
+    },
+    "dedDetId24Q": "557148627,562078891,579442506",
+    "salaries": {
+      "salary": [
+        {
+          "addressDetail": {
+            "zipCode": "",
+            "addDetail": "ADD_LINE_1 LEVEL NOS 9 TO 11 LINK ROAD,MINDSPACE GOREGAON (WEST)",
+            "pinCode": "400104",
+            "stateCode": "19",
+            "cityOrTownOrDistrict": "MUMBAI"
+          },
+          "nameOfEmployer": "J P MORGAN SERVICES INDIA PRIVATE LIMITED",
+          "salarys": {
+            "valueOfPerquisites": 14318,
+            "profitsinLieuOfSalary": 0,
+            "salary": 798224
+          },
+          "tanOfEmployer": "MUMJ05980C"
+        },
+        {
+          "addressDetail": {
+            "zipCode": "",
+            "addDetail": "GROUND & MEZ FLOOR, PREST IGE STERLING SQ 4, SBI RD, SHANTHALA NAGA R",
+            "pinCode": "560001",
+            "stateCode": "15",
+            "cityOrTownOrDistrict": "BANGALORE, BANGALORE"
+          },
+          "nameOfEmployer": "LULULEMON INDIA (SERVICES) PRIVATE LIMITED",
+          "salarys": {
+            "valueOfPerquisites": 0,
+            "profitsinLieuOfSalary": 0,
+            "salary": 775208
+          },
+          "tanOfEmployer": "BLRL08038C"
+        },
+        {
+          "addressDetail": {
+            "zipCode": "",
+            "addDetail": "ADD_LINE_1 96 NEHRU PLACE",
+            "pinCode": "110019",
+            "stateCode": "9"
+          },
+          "nameOfEmployer": "HCL TECHNOLOGIES LTD.",
+          "salarys": {
+            "valueOfPerquisites": 0,
+            "profitsinLieuOfSalary": 0,
+            "salary": 1150773
+          },
+          "tanOfEmployer": "DELH01586E"
+        }
+      ]
+    },
+    "incomeDeductions": {
+      "perquisitesValue": 14318,
+      "entertainmentAlw16Ii": 0,
+      "professionalTaxUs16Iii": 2600,
+      "totalIncomeChargeableUnHP": 0,
+      "profitsInSalary": 0,
+      "deductionUs16Ia": 50000,
+      "totalIncomeOfHP": 0,
+      "salary": 2724205
+    },
+    "allwncExemptUs10DtlsType": [
+      {
+        "salOthAmount": 0,
+        "salNatureDesc": "10(5)"
+      },
+      {
+        "salOthAmount": 0,
+        "salNatureDesc": "10(10)"
+      },
+      {
+        "salOthAmount": 0,
+        "salNatureDesc": "10(10A)"
+      },
+      {
+        "salOthAmount": 320919,
+        "salNatureDesc": "10(13A)"
+      }
+    ],
+    "intrstFrmSavingBank": 1951,
+    "TotalAllwncExemptUs10": 366282,
+    "PensionerFlag": "N",
+    "isActive": false
+  },
+  "partAGEN2": null,
+  "ScheduleEI": null,
+  "Form10A": null,
+  "Form10IFA": null,
+  "ais": null,
+  "ScheduleESOP": null,
+  "formCCBA": null,
+  "auditInfo": null,
+  "incDeductionsOthIncCPC": [
+    {
+      "itrAy": "2022",
+      "othSrcOthAmount": 0,
+      "othSrcNatureDesc": "TAX"
+    }
+  ],
+  "formCCBD": null,
+  "formCCBC": null,
+  "formCCBB": null,
+  "form67": null,
+  "assesseeRep": null,
+  "form66": null,
+  "form10E": null,
+  "Schedule80RA": null,
+  "Form10IA": null,
+  "Schedule80G": null,
+  "form64A": null,
+  "Form10AB": null,
+  "Form10IEA": null,
+  "form10IF": {
+    "newTaxRegime": "N"
+  },
+  "form10AC": null,
+  "form10BOR10BB": null,
+  "natOfBus": null,
+  "filingReturn": null,
+  "lastFiledITR": {
+    "foreignBankDetails": [],
+    "usrDeductUndChapVIAType": {},
+    "NewTaxRegime": "N",
+    "schedule80D": {
+      "Sec80DSelfFamSrCtznHealth": {
+        "SeniorCitizenFlag": "S",
+        "ParentSeniorCitizenFlag": "P"
+      }
+    },
+    "scheduleUD": [],
+    "scheduleMATC": {},
+    "employerCategory": "OTH",
+    "scheduleAMTC": {},
+    "totalNumOfMonths": 0,
+    "bankAccountDtls": [
+      {
+        "addtnlBankDetails": [
+          {
+            "useForRefund": "true",
+            "bankAccountNo": "5265918559",
+            "bankName": "CITIBANK NA",
+            "ifsccode": "CITI0000006"
+          },
+          {
+            "useForRefund": "false",
+            "bankAccountNo": "218101514620",
+            "bankName": "ICICI BANK LIMITED",
+            "ifsccode": "ICIC0002181"
+          }
+        ]
+      }
+    ]
+  },
+  "form3CEA": null,
+  "form3CEB": null
+}
